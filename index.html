@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Oxygen Magic Academy | Human-Centered Education for the AI Era</title>
+
+<meta
+name="description"
+content="Oxygen Magic Academy is an independent applied education project supporting AI-assisted learning, student understanding, academic development, teacher-guided education, and future readiness."
+
+>
+
+<meta
+name="keywords"
+content="Oxygen Magic Academy, AI-assisted learning, future education, student understanding, teacher-guided learning, academic development, career readiness, human-centered education"
+
+>
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Xufen Tu">
+
+  <meta property="og:title" content="Oxygen Magic Academy">
+  <meta
+    property="og:description"
+    content="Human-centered education for AI-assisted learning, academic development, and future readiness."
+  >
+  <meta property="og:type" content="website">
+
+  <style>
+    :root {
+      --background: #f7f6fb;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: #ffffff;
+      --text: #252332;
+      --muted: #6d687d;
+      --primary: #6352a6;
+      --primary-soft: #ede8ff;
+      --line: rgba(99, 82, 166, 0.14);
+      --shadow: 0 24px 70px rgba(69, 55, 115, 0.11);
+      --radius-large: 30px;
+      --radius-medium: 22px;
+      --radius-small: 14px;
+      --container: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(187, 173, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(222, 214, 255, 0.34), transparent 22%),
+        linear-gradient(180deg, #fcfbff 0%, #f6f3fc 52%, #ffffff 100%);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--line);
+      background: rgba(252, 251, 255, 0.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .navigation {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      object-fit: contain;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(69, 55, 115, 0.12);
+    }
+
+    .brand-name {
+      display: block;
+      color: var(--primary);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.15;
+    }
+
+    .brand-note {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .language-button {
+      padding: 9px 14px;
+      color: var(--primary);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 86px 0 44px;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 62px 34px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      top: -190px;
+      right: -120px;
+      border-radius: 50%;
+      background: rgba(183, 165, 255, 0.2);
+      filter: blur(4px);
+    }
+
+    .hero-logo {
+      position: relative;
+      width: 280px;
+      max-width: 76%;
+      margin: 0 auto 28px;
+    }
+
+    .eyebrow {
+      position: relative;
+      margin-bottom: 16px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h1 {
+      position: relative;
+      max-width: 940px;
+      margin: 0 auto;
+      color: var(--primary);
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.03;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-subtitle {
+      position: relative;
+      max-width: 900px;
+      margin: 24px auto 0;
+      color: var(--muted);
+      font-size: clamp(19px, 2.2vw, 25px);
+      line-height: 1.55;
+    }
+
+    .hero-summary {
+      position: relative;
+      max-width: 900px;
+      margin: 24px auto 0;
+      color: #565161;
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 21px;
+      border-radius: 999px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, #7561bf 0%, #a793ee 100%);
+      box-shadow: 0 15px 35px rgba(99, 82, 166, 0.22);
+    }
+
+    .button-secondary {
+      color: var(--primary);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.92);
+    }
+
+    .section {
+      padding: 78px 0 0;
+    }
+
+    .section-heading {
+      max-width: 850px;
+      margin: 0 auto 34px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      color: var(--primary);
+      font-size: clamp(31px, 4.5vw, 46px);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .section-heading p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .statement {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 38px 34px;
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-large);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .statement p {
+      margin: 0;
+      color: #4b4660;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(23px, 3vw, 31px);
+      line-height: 1.55;
+    }
+
+    .statement .principle-cn {
+      display: block;
+      margin-top: 14px;
+      color: var(--primary);
+      font-family: inherit;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      min-height: 100%;
+      padding: 30px 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-medium);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 19px;
+      color: var(--primary);
+      border-radius: 12px;
+      background: var(--primary-soft);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 24px;
+      line-height: 1.25;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: #595464;
+      font-size: 16px;
+    }
+
+    .wide-panel {
+      padding: 40px 34px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-large);
+      background: var(--surface-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .audience-grid h2 {
+      margin: 0;
+      color: var(--primary);
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.15;
+    }
+
+    .audience-grid p {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .audience-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .audience-item {
+      padding: 18px 17px;
+      color: #514b61;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-small);
+      background: #fbfaff;
+      font-size: 15px;
+      font-weight: 650;
+    }
+
+    .institution-panel {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .institution-panel h2 {
+      margin: 0;
+      color: var(--primary);
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.15;
+    }
+
+    .institution-panel p {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .institution-note {
+      padding: 28px 24px;
+      border-radius: var(--radius-medium);
+      background: linear-gradient(145deg, #eee9ff 0%, #faf8ff 100%);
+      color: #514968;
+    }
+
+    .institution-note strong {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--primary);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+    }
+
+    .contact-panel {
+      text-align: center;
+    }
+
+    .contact-panel h2 {
+      margin: 0;
+      color: var(--primary);
+      font-size: clamp(32px, 4vw, 46px);
+    }
+
+    .contact-panel p {
+      max-width: 760px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    footer {
+      margin-top: 82px;
+      padding: 46px 20px;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      background: #eee9fa;
+    }
+
+    .footer-title {
+      color: var(--primary);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    footer p {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    .disclaimer {
+      max-width: 900px;
+      margin: 24px auto 0;
+      color: #7a7488;
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    [data-lang="zh"] {
+      display: none;
+    }
+
+    body.show-zh [data-lang="en"] {
+      display: none;
+    }
+
+    body.show-zh [data-lang="zh"] {
+      display: block;
+    }
+
+    body.show-zh span[data-lang="zh"],
+    body.show-zh a[data-lang="zh"] {
+      display: inline;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links {
+        display: none;
+      }
+
+      .grid,
+      .audience-grid,
+      .institution-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .audience-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 58px;
+      }
+
+      .hero-panel,
+      .wide-panel,
+      .statement {
+        padding: 30px 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 22px, var(--container));
+      }
+
+      .brand-note {
+        display: none;
+      }
+
+      .hero-panel {
+        padding: 38px 18px;
+      }
+
+      .section {
+        padding-top: 60px;
+      }
+
+      .card {
+        padding: 25px 21px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="container navigation">
+
+```
+  <a class="brand" href="#top" aria-label="Oxygen Magic Academy home">
+    <img src="logo.png" alt="Oxygen Magic Academy logo" class="brand-logo">
+
+    <div>
+      <strong class="brand-name">Oxygen Magic Academy</strong>
+
+      <span class="brand-note" data-lang="en">
+        Human-Centered Education for the AI Era
+      </span>
+
+      <span class="brand-note" data-lang="zh">
+        面向AI时代的以人为中心教育
+      </span>
+    </div>
+  </a>
+
+  <div class="nav-right">
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about" data-lang="en">About</a>
+      <a href="#about" data-lang="zh">项目介绍</a>
+
+      <a href="#value" data-lang="en">What We Support</a>
+      <a href="#value" data-lang="zh">项目价值</a>
+
+      <a href="#institutions" data-lang="en">For Institutions</a>
+      <a href="#institutions" data-lang="zh">机构合作</a>
+
+      <a href="#contact" data-lang="en">Contact</a>
+      <a href="#contact" data-lang="zh">联系</a>
+    </nav>
+
+    <button
+      class="language-button"
+      id="languageToggle"
+      type="button"
+      aria-label="Switch language"
+    >
+      中文
+    </button>
+  </div>
+
+</div>
+```
+
+  </header>
+
+  <main id="top">
+
+```
+<section class="hero">
+  <div class="container">
+    <div class="hero-panel">
+
+      <img src="logo.png" alt="Oxygen Magic Academy logo" class="hero-logo">
+
+      <div class="eyebrow" data-lang="en">
+        Applied Education Project
+      </div>
+
+      <div class="eyebrow" data-lang="zh">
+        应用型教育项目
+      </div>
+
+      <h1 data-lang="en">
+        Learning for a World Shaped by AI
+      </h1>
+
+      <h1 data-lang="zh">
+        面向AI时代的真实学习
+      </h1>
+
+      <p class="hero-subtitle" data-lang="en">
+        Supporting student understanding, teacher-guided learning,
+        academic development, and future readiness.
+      </p>
+
+      <p class="hero-subtitle" data-lang="zh">
+        支持学生真实理解、教师引导、学业发展与未来能力准备。
+      </p>
+
+      <p class="hero-summary" data-lang="en">
+        Oxygen Magic Academy is an independent applied education project
+        developed for schools, learners, families, and educational programs
+        adapting to a rapidly changing learning environment.
+      </p>
+
+      <p class="hero-summary" data-lang="zh">
+        氧气魔法学院是一个独立应用型教育项目，面向正在适应全新学习环境的学校、
+        学习者、家庭与教育项目。
+      </p>
+
+      <div class="hero-actions">
+        <a href="#value" class="button button-primary" data-lang="en">
+          Explore the Project
+        </a>
+
+        <a href="#value" class="button button-primary" data-lang="zh">
+          了解项目
+        </a>
+
+        <a href="#contact" class="button button-secondary" data-lang="en">
+          Discuss a School Pilot
+        </a>
+
+        <a href="#contact" class="button button-secondary" data-lang="zh">
+          咨询学校试点
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2 data-lang="en">Education Still Needs a Human Center</h2>
+      <h2 data-lang="zh">教育仍然需要以人为中心</h2>
+
+      <p data-lang="en">
+        AI is changing how students find information, complete assignments,
+        practice language, and prepare for future work. The challenge is no
+        longer access to answers alone. The deeper challenge is whether
+        learners can still understand, explain, improve, and responsibly use
+        what they receive.
+      </p>
+
+      <p data-lang="zh">
+        AI正在改变学生获取信息、完成作业、练习语言和准备未来工作的方式。
+        现在的问题已经不只是能否快速得到答案，而是学习者能否真正理解、
+        清楚表达、不断改进，并对所使用的内容负责。
+      </p>
+    </div>
+
+    <div class="statement">
+      <p data-lang="en">
+        AI can help learning move faster. Human beings must keep learning
+        meaningful, responsible, and connected to real life.
+        <span class="principle-cn">AI负责快，人负责对。</span>
+      </p>
+
+      <p data-lang="zh">
+        AI可以让学习更快，但人必须让学习保持真实、负责，并与现实生活连接。
+        <span class="principle-cn">AI负责快，人负责对。</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="value">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2 data-lang="en">What the Project Supports</h2>
+      <h2 data-lang="zh">项目支持什么</h2>
+
+      <p data-lang="en">
+        Oxygen Magic Academy focuses on educational needs that are becoming
+        increasingly important as AI becomes part of everyday learning.
+      </p>
+
+      <p data-lang="zh">
+        随着AI进入日常学习，氧气魔法学院关注正在变得越来越重要的教育需求。
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <span class="card-number">01</span>
+
+        <h3 data-lang="en">Student Understanding</h3>
+        <h3 data-lang="zh">学生真实理解</h3>
+
+        <p data-lang="en">
+          Helping learners move beyond completed answers toward clearer
+          understanding, personal expression, and confident use of knowledge.
+        </p>
+
+        <p data-lang="zh">
+          帮助学习者从“完成答案”走向真正理解、个人表达与有信心地使用知识。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card-number">02</span>
+
+        <h3 data-lang="en">Teacher-Guided Learning</h3>
+        <h3 data-lang="zh">教师引导学习</h3>
+
+        <p data-lang="en">
+          Supporting the continuing value of teachers in observation,
+          explanation, educational guidance, and student development.
+        </p>
+
+        <p data-lang="zh">
+          强调教师在观察、解释、教育引导和学生成长中的持续价值。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card-number">03</span>
+
+        <h3 data-lang="en">Responsible AI Use</h3>
+        <h3 data-lang="zh">负责任地使用AI</h3>
+
+        <p data-lang="en">
+          Helping learners and institutions use AI as educational support
+          while keeping academic responsibility and human oversight visible.
+        </p>
+
+        <p data-lang="zh">
+          帮助学习者与机构把AI作为教育支持，同时保持学业责任和人类监督清晰可见。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card-number">04</span>
+
+        <h3 data-lang="en">Academic Development</h3>
+        <h3 data-lang="zh">学业能力发展</h3>
+
+        <p data-lang="en">
+          Supporting reading, writing, language learning, study confidence,
+          academic participation, and continued learning.
+        </p>
+
+        <p data-lang="zh">
+          支持阅读、写作、语言学习、学习信心、学业参与和持续学习能力。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card-number">05</span>
+
+        <h3 data-lang="en">Future Readiness</h3>
+        <h3 data-lang="zh">未来能力准备</h3>
+
+        <p data-lang="en">
+          Connecting education with communication, adaptability, technology
+          awareness, career preparation, and participation in future work.
+        </p>
+
+        <p data-lang="zh">
+          把教育与沟通能力、适应能力、技术理解、职业准备和未来工作参与连接起来。
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="card-number">06</span>
+
+        <h3 data-lang="en">Institutional Adaptation</h3>
+        <h3 data-lang="zh">教育机构适应</h3>
+
+        <p data-lang="en">
+          Supporting schools and educational programs as they consider how
+          AI may be introduced without weakening their human and educational responsibilities.
+        </p>
+
+        <p data-lang="zh">
+          支持学校与教育项目在引入AI时，仍然守住自身的人类责任与教育责任。
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="wide-panel audience-grid">
+
+      <div>
+        <h2 data-lang="en">Designed for Real Learning Environments</h2>
+        <h2 data-lang="zh">面向真实学习环境</h2>
+
+        <p data-lang="en">
+          The project can support different learning settings without
+          presenting one rigid model for every institution. Each organization
+          remains responsible for its students, teachers, policies, technology,
+          privacy, and educational decisions.
+        </p>
+
+        <p data-lang="zh">
+          本项目可服务于不同学习环境，但不会用单一固定模式要求所有机构。
+          每个机构仍然对学生、教师、政策、技术、隐私和教育决策承担责任。
+        </p>
+      </div>
+
+      <div class="audience-list">
+        <div class="audience-item" data-lang="en">Language Schools</div>
+        <div class="audience-item" data-lang="zh">语言学校</div>
+
+        <div class="audience-item" data-lang="en">After-School Programs</div>
+        <div class="audience-item" data-lang="zh">课后教育项目</div>
+
+        <div class="audience-item" data-lang="en">Tutoring Programs</div>
+        <div class="audience-item" data-lang="zh">辅导与补习项目</div>
+
+        <div class="audience-item" data-lang="en">Adult Learning</div>
+        <div class="audience-item" data-lang="zh">成人学习项目</div>
+
+        <div class="audience-item" data-lang="en">Community Education</div>
+        <div class="audience-item" data-lang="zh">社区教育</div>
+
+        <div class="audience-item" data-lang="en">Career Readiness Programs</div>
+        <div class="audience-item" data-lang="zh">职业准备项目</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="institutions">
+  <div class="container">
+    <div class="wide-panel institution-panel">
+
+      <div>
+        <h2 data-lang="en">For Schools and Educational Organizations</h2>
+        <h2 data-lang="zh">面向学校与教育机构</h2>
+
+        <p data-lang="en">
+          Oxygen Magic Academy is available for early conversations with
+          schools and educational organizations interested in AI-assisted
+          learning, student understanding, language development, academic
+          participation, and future readiness.
+        </p>
+
+        <p data-lang="zh">
+          氧气魔法学院欢迎与关注AI辅助学习、学生理解、语言发展、
+          学业参与和未来能力准备的学校及教育机构进行早期交流。
+        </p>
+
+        <p data-lang="en">
+          Initial collaboration may begin with a limited pilot, educator
+          discussion, institutional review, or a clearly defined learning group.
+        </p>
+
+        <p data-lang="zh">
+          初步合作可以从小规模试点、教师交流、机构评估或明确的学习小组开始。
+        </p>
+      </div>
+
+      <aside class="institution-note">
+        <strong data-lang="en">Start Small. Learn Clearly.</strong>
+        <strong data-lang="zh">从小规模开始，清楚地验证。</strong>
+
+        <span data-lang="en">
+          A school does not need to replace its existing curriculum to begin
+          exploring responsible AI-assisted learning.
+        </span>
+
+        <span data-lang="zh">
+          学校不需要替换现有课程，也可以开始探索负责任的AI辅助学习。
+        </span>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="wide-panel contact-panel">
+
+      <h2 data-lang="en">Begin a Conversation</h2>
+      <h2 data-lang="zh">开始交流</h2>
+
+      <p data-lang="en">
+        Schools, language programs, community organizations, educators, and
+        potential partners may contact Oxygen Magic Academy to discuss a
+        possible pilot, educational presentation, or future collaboration.
+      </p>
+
+      <p data-lang="zh">
+        学校、语言项目、社区机构、教育工作者及潜在合作方，
+        可联系氧气魔法学院讨论试点、教育介绍或未来合作。
+      </p>
+
+      <div class="contact-links">
+        <a
+          href="mailto:oxygenmagicacademy@gmail.com"
+          class="button button-primary"
+        >
+          oxygenmagicacademy@gmail.com
+        </a>
+
+        <a
+          href="https://github.com/Frequency-Sovereignty-System/oxygen-magic-academy"
+          class="button button-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-lang="en"
+        >
+          View Project Record
+        </a>
+
+        <a
+          href="https://github.com/Frequency-Sovereignty-System/oxygen-magic-academy"
+          class="button button-secondary"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-lang="zh"
+        >
+          查看项目记录
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+```
+
+  </main>
+
+  <footer>
+    <div class="footer-title">Oxygen Magic Academy</div>
+
+```
+<p data-lang="en">
+  Human-Centered Education · AI-Assisted Learning · Academic Development · Future Readiness
+</p>
+
+<p data-lang="zh">
+  以人为中心的教育 · AI辅助学习 · 学业发展 · 未来能力准备
+</p>
+
+<div class="disclaimer" data-lang="en">
+  Oxygen Magic Academy is an independent applied education project and is not
+  presented as an accredited school, degree-granting institution, immigration
+  service, medical provider, psychotherapy practice, legal service, employment
+  agency, or professional licensing body. Project materials are educational in
+  nature and do not guarantee academic outcomes, employment, certification,
+  immigration status, admission, or visa approval.
+</div>
+
+<div class="disclaimer" data-lang="zh">
+  氧气魔法学院是独立应用型教育项目，不属于经认证学校、学位授予机构、
+  移民服务机构、医疗机构、心理治疗机构、法律服务机构、职业介绍机构或专业许可机构。
+  项目材料属于教育用途，不保证学业结果、就业、认证、移民身份、录取或签证批准。
+</div>
+
+<p style="margin-top: 24px;">
+  © 2024–Present Oxygen Magic Academy
+</p>
+```
+
+  </footer>
+
+  <script>
+    const languageToggle = document.getElementById("languageToggle");
+
+    languageToggle.addEventListener("click", () => {
+      const isChinese = document.body.classList.toggle("show-zh");
+
+      languageToggle.textContent = isChinese ? "English" : "中文";
+      document.documentElement.lang = isChinese ? "zh-CN" : "en";
+    });
+  </script>
+
+</body>
+</html>
