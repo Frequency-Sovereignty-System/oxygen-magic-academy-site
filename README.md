@@ -32,5 +32,4 @@ Oxygen Magic Academy is not an accredited school, degree-granting institution, i
 
 **AI负责快，人负责对。**
 
-Author: Xufen Tu
 Status: Public website
