@@ -33,3 +33,10 @@ Oxygen Magic Academy is not an accredited school, degree-granting institution, i
 **AI负责快，人负责对。**
 
 Status: Public website
+
+## Public education partnership page
+
+- Canonical page: `https://academy.bb369tech.com/education-programs.html`
+- Legacy route: `school-pilot.html` redirects to the canonical page.
+- Public disclosure is intentionally limited to institutional needs, partnership value, high-level collaboration steps, and responsibility boundaries.
+- Detailed curriculum, teaching materials, assessment logic, data structures, pricing, licensing terms, and internal implementation methods are not published on the public website.
